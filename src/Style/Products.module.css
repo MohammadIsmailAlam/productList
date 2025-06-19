@@ -83,7 +83,7 @@
   border-color: var(--primary);
 }
 
-/* .tableContainer {
+.tableContainer {
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -108,9 +108,9 @@
   padding: 1rem;
   border-bottom: 1px solid #e2e8f0; 
   color: #334155;
-} */
+} 
 
-/* .actionCell {
+ .actionCell {
   display: flex;
   gap: 0.5rem;
 }
@@ -146,7 +146,7 @@
 
 .deleteButton:hover {
   color: var(--danger);
-} */
+}
 
 .exportButtons {
   display: flex;
@@ -324,3 +324,36 @@
   background-color: #f44336;
   color: white;
 } 
+
+.viewToggle {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.viewLabel {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  gap: 8px;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+.toggleIcon {
+  font-size: 20px;
+}
