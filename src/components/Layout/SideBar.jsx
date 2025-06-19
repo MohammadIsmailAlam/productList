@@ -9,6 +9,8 @@ const Sidebar = ({ collapsed, toggleCollapse }) => {
     window.location.href = "/login";
   };
 
+  console.log(collapsed);
+
   return (
     <div className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""}`}>
       <div className={styles.brand}>

@@ -42,3 +42,15 @@
   font-weight: 600;
   font-size: 0.875rem;
 }
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}

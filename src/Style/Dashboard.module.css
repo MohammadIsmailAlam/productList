@@ -7,13 +7,30 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 240px; /* Match sidebar width */
+  margin-left: 240px; /* Default sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.mainContent.collapsed {
+  margin-left: 70px; /* Collapsed sidebar width */
 }
 
 .contentArea {
   flex: 1;
   padding: 1.5rem;
-  background-color: #f8fafc; /* Light gray background */
+  background-color: #f8fafc;
   overflow-y: auto;
-  height: calc(100vh - 64px); /* Subtract header height */
+  min-height: calc(100vh - 64px - 60px); /* Subtract header/footer height */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding-top: 60px; /* Make space for mobile sidebar */
+  }
+  
+  .mainContent.collapsed {
+    margin-left: 0;
+  }
 }

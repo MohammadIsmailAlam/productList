@@ -7,7 +7,7 @@
   flex-direction: column;
   padding: 24px 0;
   position: fixed;
-  z-index: 40;
+  z-index: 100; /* Higher than content */
   transition: width 0.3s ease;
   overflow-y: auto;
 }
@@ -103,7 +103,7 @@
   align-items: center;
 }
 
-.sidebar.collapsed .brand,
+.sidebar.collapsed .brand h2,
 .sidebar.collapsed .navText,
 .sidebar.collapsed .logoutText {
   display: none;
@@ -124,45 +124,60 @@
 @media (max-width: 768px) {
   .sidebar {
     width: 70px;
-    align-items: center;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    padding: 0;
+    z-index: 1000;
   }
-  
-  .brand,
-  .navText,
-  .logoutText {
+
+  .sidebar.collapsed {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .brand {
     display: none;
   }
-  
-  .navIcon,
-  .logoutIcon {
-    margin-right: 0;
-    font-size: 1.4rem;
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    flex: 1;
   }
-  
+
   .navItem {
+    flex-direction: column;
+    padding: 10px 5px;
     justify-content: center;
-    padding: 16px 0;
   }
-  
-  /* Show text on hover */
-  .sidebar:hover {
-    width: 240px;
-    align-items: stretch;
+
+  .footer {
+    display: none;
   }
-  
-  .sidebar:hover .brand,
-  .sidebar:hover .navText,
-  .sidebar:hover .logoutText {
-    display: block;
+
+  .navIcon {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
-  
-  .sidebar:hover .navIcon,
-  .sidebar:hover .logoutIcon {
-    margin-right: 16px;
-  }
-  
-  .sidebar:hover .navItem {
-    justify-content: flex-start;
-    padding: 12px 24px;
-  }
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #f2e9e4;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+/* For collapsed state */
+.sidebar.collapsed .toggleButton {
+  position: static;
+  margin-top: 10px;
 }
