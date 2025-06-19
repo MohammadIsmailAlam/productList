@@ -1,0 +1,168 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #22223b;
+  color: #f2e9e4;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  position: fixed;
+  z-index: 40;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+}
+
+.brand {
+  padding: 0 24px 24px;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #4a4e69;
+}
+
+.brand h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav {
+  flex: 1;
+  padding: 16px 0;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #c9ada7;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background: #4a4e69;
+  color: #f2e9e4;
+}
+
+.navItem.active {
+  background: #3a3e5b;
+  color: #ffffff;
+}
+
+.navIcon {
+  margin-right: 16px;
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.navText {
+  white-space: nowrap;
+}
+
+.footer {
+  padding: 16px;
+  border-top: 1px solid #4a4e69;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  color: #c9ada7;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.logoutButton:hover {
+  background: #4a4e69;
+  color: #f2e9e4;
+}
+
+.logoutIcon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  width: 70px;
+  align-items: center;
+}
+
+.sidebar.collapsed .brand,
+.sidebar.collapsed .navText,
+.sidebar.collapsed .logoutText {
+  display: none;
+}
+
+.sidebar.collapsed .navIcon,
+.sidebar.collapsed .logoutIcon {
+  margin-right: 0;
+  font-size: 1.4rem;
+}
+
+.sidebar.collapsed .navItem {
+  justify-content: center;
+  padding: 16px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    align-items: center;
+  }
+  
+  .brand,
+  .navText,
+  .logoutText {
+    display: none;
+  }
+  
+  .navIcon,
+  .logoutIcon {
+    margin-right: 0;
+    font-size: 1.4rem;
+  }
+  
+  .navItem {
+    justify-content: center;
+    padding: 16px 0;
+  }
+  
+  /* Show text on hover */
+  .sidebar:hover {
+    width: 240px;
+    align-items: stretch;
+  }
+  
+  .sidebar:hover .brand,
+  .sidebar:hover .navText,
+  .sidebar:hover .logoutText {
+    display: block;
+  }
+  
+  .sidebar:hover .navIcon,
+  .sidebar:hover .logoutIcon {
+    margin-right: 16px;
+  }
+  
+  .sidebar:hover .navItem {
+    justify-content: flex-start;
+    padding: 12px 24px;
+  }
+}

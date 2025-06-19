@@ -1,0 +1,132 @@
+.actionBar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.searchGroup {
+  flex: 5;
+}
+
+.filterGroup {
+  flex: 5;
+}
+
+.exportGroup {
+  flex: 2;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.exportToggle {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exportToggle:hover {
+  background-color: #e2e8f0;
+}
+
+.exportDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 0.25rem;
+}
+
+/* ... (keep all existing styles) ... */
+
+.exportOption {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.exportOption:hover {
+  background-color: #f8fafc;
+}
+
+.exportOption svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* PDF option - red */
+.exportOption:nth-child(1) {
+  color: #dc2626; /* red-600 */
+}
+
+.exportOption:nth-child(1):hover {
+  background-color: #fee2e2; /* red-50 */
+}
+
+.exportOption:nth-child(1) svg {
+  color: #dc2626; /* red-600 */
+}
+
+/* Excel option - green */
+.exportOption:nth-child(2) {
+  color: #16a34a; /* green-600 */
+}
+
+.exportOption:nth-child(2):hover {
+  background-color: #dcfce7; /* green-50 */
+}
+
+.exportOption:nth-child(2) svg {
+  color: #16a34a; /* green-600 */
+}

@@ -1,0 +1,34 @@
+.footer {
+  background-color: white;
+  border-top: 1px solid #e5e7eb; /* gray-200 */
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+.container {
+  max-width: 80rem; /* 7xl */
+  /* margin: 0 auto; */
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.content {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+  padding: 0.5rem 0;
+}

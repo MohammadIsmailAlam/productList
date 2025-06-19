@@ -1,0 +1,19 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px; /* Match sidebar width */
+}
+
+.contentArea {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f8fafc; /* Light gray background */
+  overflow-y: auto;
+  height: calc(100vh - 64px); /* Subtract header height */
+}

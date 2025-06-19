@@ -1,0 +1,326 @@
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.createButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.createButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.filtersContainer {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtersRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filterGroup {
+  flex: 1;
+}
+
+.filterLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.selectInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* .tableContainer {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productTable th {
+  background-color: #f8fafc; 
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #64748b; 
+  border-bottom: 1px solid #e2e8f0; 
+}
+
+.productTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0; 
+  color: #334155;
+} */
+
+/* .actionCell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+
+.editButton {
+  color: #0ea5e9;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.editButton:hover {
+  color: var(--primary);
+}
+
+.deleteButton {
+  color: #ef4444; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  color: var(--danger);
+} */
+
+.exportButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.exportButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.pdfButton {
+  background-color: var(--danger);
+  color: white;
+}
+
+.excelButton {
+  background-color: var(--success);
+  color: white;
+}
+
+.exportButton:hover {
+  opacity: 0.9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid var(--gray);
+}
+
+.pageInfo {
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.pageButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.pageButton:hover {
+  background-color: #f8fafc;
+}
+
+.pageButton.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.actionBar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchGroup, .filterGroup {
+  flex: 1;
+}
+
+.exportGroup {
+  width: 200px;
+}
+
+
+.cardContainer {
+  width: 100%;
+  padding: 1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.productCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cardBody {
+  padding: 1rem;
+}
+
+.cardDescription {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.cardDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Keep your existing button styles */
+.editButton, .deleteButton {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+} 

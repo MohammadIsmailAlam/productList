@@ -1,0 +1,67 @@
+.modalContent {
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #334155; /* slate-700 */
+}
+
+.input,
+.select,
+.textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.radioGroup,
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.radioGroup label,
+.checkboxGroup label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.updateButton {
+  background-color: #3b82f6;
+  color: white;
+}
